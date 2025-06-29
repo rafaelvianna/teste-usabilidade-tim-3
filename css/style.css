@@ -1,0 +1,372 @@
+@font-face {
+  font-family: "TIMSans-regular";
+  src: url("../font/TIMSans-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "TIMSans-bold";
+  src: url("../font/TIMSans-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "TIMSans-light";
+  src: url("../font/TIMSans-Light.otf") format("opentype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "TIMSans-regular";
+  text-decoration: none;
+}
+
+header {
+  background: #002198;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.info {
+  padding: 0 20px;
+}
+
+.container-links {
+  padding: 20px;
+}
+
+.btn {
+  padding: 15px 12px;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 12px;
+}
+.btn.primary-white {
+  background: #fff;
+  color: #0026D9;
+}
+.btn.primary-blue {
+  background: #0026D9;
+  color: #ffffff;
+}
+
+.m30 {
+  background: #F0F1F2;
+  text-align: center;
+  padding: 40px;
+}
+.m30 span {
+  display: block;
+  margin-bottom: 15px;
+}
+.m30 h2 {
+  margin-bottom: 25px;
+}
+.m30 p {
+  color: #696969;
+  font-family: "TIMSans-light";
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.m30 a {
+  display: inline-block;
+  margin-bottom: 40px;
+  font-size: 14px;
+  font-family: "TIMSans-light";
+}
+.m30 img {
+  width: 100%;
+}
+
+span, h2 {
+  font-family: "TIMSans-light";
+  font-size: 14px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.autoatendimento {
+  background: #002198;
+  margin: 0;
+  text-align: center;
+  padding: 40px;
+  color: #fff;
+}
+.autoatendimento span {
+  margin-bottom: 20px;
+  display: block;
+}
+.autoatendimento h2 {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.autoatendimento li {
+  display: flex;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #000;
+}
+.autoatendimento li div {
+  margin-left: 20px;
+}
+.autoatendimento li div h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.autoatendimento li div p {
+  font-size: 14px;
+  color: #696969;
+  font-family: "TIMSans-light";
+}
+.autoatendimento li img {
+  width: 50px;
+}
+
+.app {
+  background-color: #0026D9;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px;
+}
+.app span {
+  display: block;
+  margin-bottom: 20px;
+}
+.app h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.app a {
+  display: inline-block;
+  margin-bottom: 40px;
+}
+.app img {
+  margin-bottom: 20px;
+}
+.app h3, .app p {
+  font-family: "TIMSans-light";
+}
+.app h3 {
+  margin-bottom: 20px;
+}
+
+.reacher {
+  padding: 40px;
+}
+.reacher img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.reacher h2 {
+  font-size: 22px;
+}
+.reacher h3 {
+  font-family: "TIMSans-light";
+  font-size: 14px;
+  display: block;
+  margin-bottom: 20px;
+}
+.reacher div h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.reacher div a {
+  text-decoration: underline;
+  color: blue;
+  font-size: 14px;
+}
+
+.oferta {
+  background-color: #002198;
+  padding: 40px;
+  text-align: center;
+  color: #ffffff;
+}
+.oferta img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.oferta span {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 20px;
+}
+.oferta h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.oferta p {
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-family: "TIMSans-light";
+}
+.oferta a {
+  display: inline-block;
+}
+
+.faq {
+  background: #0026D9;
+  padding: 40px;
+  color: #fff;
+}
+.faq a {
+  color: #fff;
+  display: flex;
+  font-family: "TIMSans-light";
+}
+.faq div {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #4D67E4;
+  padding-bottom: 30px;
+}
+.faq div .links {
+  margin: 40px 0 0 0;
+}
+.faq div .links a {
+  margin-bottom: 30px;
+}
+.faq div .links a:last-of-type {
+  margin-bottom: 0;
+}
+.faq div:last-of-type {
+  border: none;
+}
+.faq strong {
+  display: flex;
+  justify-content: space-between;
+}
+.faq p {
+  margin-bottom: 20px;
+}
+
+footer img {
+  width: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+  overflow: visible !important;
+}
+
+.swiper-slide {
+  width: 80% !important;
+  background-color: #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 490px;
+}
+
+.swiper-slide-next,
+.swiper-slide-prev {
+  margin: auto;
+  min-height: 100%;
+  height: 460px !important;
+}
+
+.swiper-controls {
+  position: relative;
+  width: 100%;
+  height: 60px;
+}
+
+.ofertas img {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+.ofertas h2 {
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 10px;
+  font-family: "TIMSans-bold";
+}
+.ofertas p {
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 10px;
+  font-family: "TIMSans-light";
+  margin-bottom: 10px;
+}
+.ofertas .links-container {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+.ofertas .links-container .btn {
+  padding: 15px 0;
+  border: 1px solid #fff;
+  border-radius: 12px;
+  width: 46%;
+  text-align: center;
+  font-size: 13px;
+}
+
+.tim-black {
+  background-image: url("../img/tim-black-bg.png");
+  background-position: top;
+}
+
+.ultra-fibra {
+  background-image: url("../img/ultrafibra-bg.png");
+  background-position: top;
+}
+.ultra-fibra h2 {
+  margin-top: 30px;
+}
+.ultra-fibra .kv-img {
+  margin: 50px 0;
+}
+
+.pre {
+  background-color: #002198;
+}
+.pre h2 {
+  margin-top: 30px;
+}
+.pre .kv-img {
+  margin-bottom: -60px;
+}
+
+.controle {
+  background-image: url("../img/ultrafibra-bg.png");
+  background-position: top;
+}
+.controle h2 {
+  margin-top: 30px;
+}
+.controle .kv-img {
+  margin: 20px 0;
+}
+
+.swiper-pagination {
+  position: absolute !important;
+  bottom: 21px !important;
+  z-index: 1 !important;
+}
+
+.swiper-button-next:after {
+  position: absolute;
+  right: 50px;
+  font-size: 20px !important;
+  z-index: 99 !important;
+}
+
+.swiper-button-prev:after {
+  position: absolute;
+  left: 50px;
+  font-size: 20px !important;
+  z-index: 99 !important;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,145 @@
+@font-face {
+     font-family: 'TIMSans-regular';
+     src: url('../font/TIMSans-Regular.otf') format('opentype');
+}
+
+@font-face {
+     font-family: 'TIMSans-bold';
+     src: url('../font/TIMSans-Bold.otf') format('opentype');
+}
+
+@font-face {
+     font-family: 'TIMSans-light';
+     src: url('../font/TIMSans-Light.otf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'TIMSans-regular';
+    text-decoration: none;
+}
+
+header {
+    background: #002198;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.info {
+    padding: 0 20px;
+}
+
+.carrossel {
+    position: relative;
+}
+
+.carrossel img {
+    width: 100%;
+}
+
+.carrossel .container-links {
+    position: absolute;
+    bottom: 20px;
+}
+
+.carrossel .item-1 {
+    margin-bottom: 20px;
+}
+
+.container-links {
+    padding: 20px;
+}
+
+.btn {
+    padding: 15px 12px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 12px;
+}
+
+.primary-white {
+    background: #fff;
+    color: #0026D9; 
+}
+
+.primary-blue {
+    background: #0026D9; 
+    color: #ffffff;
+}
+
+
+.m30 {
+    background: #F0F1F2;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+span, h2 {
+    font-family: 'TIMSans-light';
+    font-size: 14px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.m30 span {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.m30 p {
+    color: #696969;
+    font-family: 'TIMSans-light';
+    margin-bottom: 20px;
+}
+
+.m30 a {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: 'TIMSans-light';
+}
+
+.m30 img {
+    width: 100%;
+}
+
+
+.autoatendimento {
+    background: #002198;
+    margin: 0;
+    text-align: center;
+    padding: 40px 20px;
+    color: #fff;
+}
+
+.autoatendimento li {
+    display: flex;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #000;
+}
+
+.autoatendimento li div {
+    margin-left: 20px;
+}
+
+.autoatendimento li img {
+    width: 50px;
+}
+
+.autoatendimento li div h3 {
+    font-size: 16px;
+}
+
+.autoatendimento li div p {
+    font-size: 14px;
+}
