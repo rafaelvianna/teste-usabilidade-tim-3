@@ -1,76 +1,497 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Missão TIM</title>
-  <link rel="stylesheet" href="style.css" />
-
+  <link rel="stylesheet" href="./css/style.css">
   <style>
     body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: white;
-    color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      margin-bottom: 0;
     }
 
     .container {
-    max-width: 600px;
-    margin: 100px auto;
-    padding: 0 20px;
-    text-align: center;
+      height: 610px;
+      color: #fff;
+      text-align: center;
     }
 
-    h1 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 40px;
-    line-height: 1.4;
+    .container h2 {
+      font-size: 18px;
     }
 
-    .descricao {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 40px;
+    .container p {
+      font-size: 14px;
+    }
+    
+    .container button {
+      padding: 0;
+      background: none;
+      outline: none;
     }
 
-    .pergunta {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 50px;
-    color: #444;
+    .primeiro-slide {
+      background-color: #01314a;
+      /* background-image: url(./img/tim-black-bg.png); */
+      background-position: top;
+      background-repeat: no-repeat;
     }
 
-    .btn {
-    background-color: #0032db;
-    color: #fff;
-    padding: 18px 40px;
-    border-radius: 16px;
-    font-size: 18px;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
+    .segundo-slide {
+      background-color: #0126b7;
+      background-position: top;
+      background-repeat: no-repeat;
     }
 
-    .btn:hover {
-    background-color: #0029b0;
+    .terceiro-slide {
+      background-color: #0026D9;
+      background-position: top;
+      background-repeat: no-repeat;
+      /* background-image: url("./img/controle-bg-2.png"); */
+      background-size: cover;
+    }
+
+    .quarto-slide {
+      background-color: #002198;
+      /* background-image: url(./img/ultrafibra-bg.png); */
+      background-position: top;
+    }
+
+    .terceiro-slide .img-container img {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      right: 0;
+    }
+
+    .segundo-slide .img-container img {
+      position: absolute;
+      top: -23px;
+      left: 0;
+      right: 0;
+    }
+
+    .quarto-slide .img-container img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 30px;
+    }
+
+    .tab-content {
+      /* background-image: url(./img/tim-black-bg.png); */
+      padding: 20px;
+      text-align: center;
+
+    }
+
+    .tab-buttons {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scroll-padding-left: 20px;
+      gap: 12px;
+      padding-bottom: 10px;
+      margin-left: 20px;
+    }
+
+    .tab-buttons::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tab-buttons button {
+      filter: brightness(0.6);
+      transition: filter 0.3s, border 0.2s;
+    }
+
+    .tab-buttons button.active {
+      filter: brightness(1);
+    }
+
+    .tab-buttons button {
+      flex: 0 0 45%;
+      scroll-snap-align: start;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .tab-buttons button.active {
+      /* border: 1px solid #5270FE; */
+      color: white;
+    }
+
+    .tab-buttons .spacer {
+      background: transparent;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .tab-hidden {
+      display: none;
+    }
+
+    .img-container {
+      height: 203px;
+      position: relative;
+    }
+
+    .img-container img {
+      width: 100%;
+    }
+
+    .btn-link-card {
+      position: absolute;
+      bottom: 20px; /* ajuste conforme posição do botão na imagem */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%; /* ou defina um valor exato */
+      height: 70px;
+      cursor: pointer;
+      text-indent: -9999px;
+    }
+
+    .link-container {
+      position: relative;
+    }
+
+    header a {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <a href="./fallback.html">
+      <img src="./img/logo.svg" alt="logo tim">
+      <section>
+        <img src="./img/user.svg" alt="usuario">
+        <img src="./img/Menu.svg" alt="imagem menu">
+      </section>
+    </a>
+  </header>
+
   <div class="container">
-    <h1>Boas-vindas ao nosso teste!<br>Confira a missão antes de começar</h1>
-    
-    <p class="descricao">
-      A missão é: <strong>Imagine que você viu uma oferta de TIM Controle e teve interesse em comprar.</strong>
-    </p>
-    
-    <p class="pergunta">
-      O que você você você faria?
-    </p>
-    
-    <a href="./teste.html" class="btn">Vamos começar!</a>
+    <div class="tab-content" id="tab-content">
+      Toque nos botões abaixo para ver o conteúdo.
+    </div>
+
+    <div class="tab-buttons" id="tab-buttons">
+      <div class="link-container">
+        <button onclick="handleClick(0)">
+          <img src="./img/btn-1-v2.svg" alt="">
+        </button>
+        <a href="https://seulink.com" class="btn-link-card" id="conditional-link-1"></a>
+      </div>
+
+      <div class="link-container">
+        <button onclick="handleClick(1)">
+          <img src="./img/btn-2-v2.svg" alt="">
+        </button>
+        <a href="https://seulink.com" class="btn-link-card" id="conditional-link-2"></a>
+      </div>
+
+      <div class="link-container">
+        <button onclick="handleClick(2)">
+          <img src="./img/btn-3-v2.svg" alt="">
+        </button>
+        <a href="https://seulink.com" class="btn-link-card" id="conditional-link"></a>
+      </div>
+
+      <div class="link-container">
+        <button onclick="handleClick(3)">
+          <img src="./img/btn-4-v2.svg" alt="">
+        </button>
+        <a href="https://seulink.com" class="btn-link-card" id="conditional-link-3"></a>
+      </div>
+
+      <button class="spacer" disabled aria-hidden="true"></button>
+    </div>
   </div>
+
+  <!-- Conteúdo dos slides oculto -->
+  <div id="tab-panels" class="tab-hidden">
+    <div id="tab-panel-0">
+      <h2>TIM Black Família</h2>
+      <p>Aproveite muita internet e uma assinatura de streaming incluída</p>
+      <img src="./img/kv-black.png" alt="">
+    </div>
+    <div id="tab-panel-1">
+      <h2>TIM Pré XIP</h2>
+      <p>Recarregue e receba Pix na conta e WhatsApp ilimitado para tudo o mês todo</p>
+      <div class="img-container">
+        <img src="./img/kv-pre.png" class='kv-img' alt="">
+      </div>
+    </div>
+    <div id="tab-panel-2">
+      <h2>TIM Controle</h2>
+      <p>Aproveite essa oferta imperdível e escolha um novo streaming todo mês</p>
+      <div class="img-container">
+        <img src="./img/kv-pre-2.png" class='kv-img' alt="">
+      </div>
+    </div>
+    <div id="tab-panel-3">
+      <h2>TIM UltraFibra</h2>
+      <p>Internet residencial com mais estabilidade e ultra velocidade</p>
+      <div class="img-container">
+        <img src="./img/kv-ultrafibra.png" class='kv-img' alt="">
+      </div>
+    </div>
+    
+  </div>
+
+  <section class="info m30">
+        <span>Lançamento Samsung</span>
+        <h2>Aproveite essa super oferta de pré-venda!</h2>
+        <p>
+            Garanta o Galaxy Z Flip6 por R$4.899 em 12x sem juros no TIM Black Família 100GB e ganhe 1 ano de seguro para danos acidentais.
+        </p>
+        <a href="./fallback.html" class="btn primary-blue">Aproveitar oferta</a>
+        <img src="./img/m30.png" alt="Imagem da oferta">
+    </section>
+
+    <section class="info autoatendimento">
+        <span>Autoatendimento TIM</span>
+        <h2>Acesse os serviços de atendimento para clientes</h2>
+        
+        <ul>
+            <li>
+                <img src="./img/meu-tim.svg" alt="imagem item">
+                <div>
+                    <h3>Meu TIM</h3>
+                    <p>Recarregue, confira o saldo e tudo do seu plano</p>
+                </div>
+            </li>
+            <li>
+                <img src="./img/meu-tim.svg" alt="imagem item">
+                <div>
+                    <h3>Fatura ou 2ª via</h3>
+                    <p>Emita a 2ª via, copie o código de barras e mais</p>
+                </div>
+            </li>
+            <li>
+                <img src="./img/meu-tim.svg" alt="imagem item">
+                <div>
+                    <h3>Ativação de chip</h3>
+                    <p>Ative ou cadastre o chip da TIM</p>
+                </div>
+            </li>
+            <li>
+                <img src="./img/meu-tim.svg" alt="imagem item">
+                <div>
+                    <h3>Suporte técnico</h3>
+                    <p>Confira as principais dúvidas e como resolver</p>
+                </div>
+            </li>
+            <li>
+                <img src="./img/meu-tim.svg" alt="imagem item">
+                <div>
+                    <h3>Técnico Virtual TIM Fibra</h3>
+                    <p>Conte com suporte rápido para sua internet</p>
+                </div>
+            </li>
+             <li>
+                <img src="./img/meu-tim.svg" alt="imagem item">
+                <div>
+                    <h3>Mais serviços</h3>
+                    <p>Confira outras opções</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="info app">
+        <span>Novo app Meu TIM</span>
+        <h2>Encontre tudo que você precisa em um app mais rápido, moderno, intuitivo</h2>
+        <a href="./fallback.html" class="btn primary-white">Acessar Meu TIM</a>
+
+        <div>
+            <img src="./img/M2.png" alt="Imagem da oferta">
+            <h3>Faça a atualização automática</h3>
+            <p>Você não precisa baixar o app de novo, é só fazer a atualização automática para ter as novidades.</p>
+        </div>
+    </section>
+
+    <section class="info reacher">
+        <h2>Serviços para deixar seu plano ainda mais a sua cara</h2>
+
+        <div>
+            <img src="./img/reacher.png" alt="Imagem da oferta">
+            <h3>Amazon Prime</h3>
+            <h2>Aproveite o melhor do conteúdo Amazon Prime no seu plano. </h2>
+            <a href="./fallback.html">Conhecer Amazon Prime</a>
+        </div>
+    </section>
+
+    <section class="info oferta">
+        <img src="./img/m13.png" alt="Imagem da oferta">
+        <span>Surpreenda-se com o atendimento da TIM</span>
+        <h2>Imagine as possibilidades de ter um atendimento três vezes premiado</h2>
+        <p>Conheça os prêmios que o nosso atendimento recebeu e venha se surpreender!</p>
+        <a href="./fallback.html" class="btn primary-white">Conhecer prêmios</a>
+    </section>
+
+    <section class="faq">
+        <div>
+            <strong>
+                <a href="./fallback.html">Para você</a>
+                <img src="./img/arrow-chevron-top.svg" alt="arrow">
+            </strong>
+            <div class="links">
+                <a href="./fallback.html">TIM para você</a>
+                <a href="./fallback.html">Portabilidade</a>
+                <a href="./fallback.html">Loja TIM</a>
+            </div>
+        </div>
+        <div>
+            <strong>
+                <a href="./fallback.html">Para empresas</a>
+                <img src="./img/arrow-chevron-bottom.svg" alt="arrow">
+            </strong>
+        </div>
+        <div>
+            <strong>
+                <a href="./fallback.html">Quem somos</a>
+                <img src="./img/arrow-chevron-bottom.svg" alt="arrow">
+            </strong>
+        </div>
+        <div>
+            <strong>
+                <a href="./fallback.html">Fale com a gente</a>
+                <img src="./img/arrow-chevron-bottom.svg" alt="arrow">
+            </strong>
+        </div>
+        <div>
+            <p>Nossas redes</p>
+            <img src="./img/social-media.svg" alt="Redes sociais">
+        </div>
+    </section>
+
+    <footer>
+        <img src="./img/footer-img.svg" alt="logo tim">
+    </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-buttons button:not(.spacer)');
+    const container = document.getElementById('tab-buttons');
+    const content = document.getElementById('tab-content');
+    const containerWrapper = document.querySelector('.container');
+    const slideClasses = [
+      "primeiro-slide",
+      "segundo-slide",
+      "terceiro-slide",
+      "quarto-slide",
+      "quinto-slide"
+    ];
+
+    let ignoreNextScroll = false;
+
+    function selectTab(index) {
+      const panel = document.getElementById(`tab-panel-${index}`);
+      content.innerHTML = panel?.innerHTML || 'Sem conteúdo';
+
+      // Remove classes de slide anteriores
+      slideClasses.forEach(cls => containerWrapper.classList.remove(cls));
+
+      // Adiciona a nova classe do slide atual
+      containerWrapper.classList.add(slideClasses[index]);
+
+      // Atualiza visual dos botões
+      buttons.forEach((btn, i) => {
+        const isActive = i === index;
+        btn.classList.toggle('active', isActive);
+
+        // Se for o botão dentro da link-container (index 2), controlar o link
+        if (i === 0) {
+          const link = document.getElementById('conditional-link-1');
+          if (isActive) {
+            link.setAttribute('href', './fallback.html');
+            link.style.pointerEvents = 'auto';
+          } else {
+            link.removeAttribute('href');
+            link.style.pointerEvents = 'none';
+          }
+        }
+
+        if (i === 1) {
+          const link = document.getElementById('conditional-link-2');
+          if (isActive) {
+            link.setAttribute('href', './fallback.html');
+            link.style.pointerEvents = 'auto';
+          } else {
+            link.removeAttribute('href');
+            link.style.pointerEvents = 'none';
+          }
+        }
+
+        if (i === 2) {
+          const link = document.getElementById('conditional-link');
+          if (isActive) {
+            link.setAttribute('href', './Feedback.html');
+            link.style.pointerEvents = 'auto';
+          } else {
+            link.removeAttribute('href');
+            link.style.pointerEvents = 'none';
+          }
+        }
+
+        if (i === 3) {
+          const link = document.getElementById('conditional-link-3');
+          if (isActive) {
+            link.setAttribute('href', './fallback.html');
+            link.style.pointerEvents = 'auto';
+          } else {
+            link.removeAttribute('href');
+            link.style.pointerEvents = 'none';
+          }
+        }
+      });
+    }
+
+    function handleClick(index) {
+      selectTab(index);
+      buttons[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+      ignoreNextScroll = true;
+    }
+
+    let isScrolling;
+    container.addEventListener('scroll', () => {
+      if (ignoreNextScroll) {
+        ignoreNextScroll = false;
+        return;
+      }
+
+      window.clearTimeout(isScrolling);
+      isScrolling = setTimeout(() => {
+        let leftMostIndex = 0;
+        let minOffset = Infinity;
+
+        buttons.forEach((btn, i) => {
+          const offset = btn.getBoundingClientRect().left - container.getBoundingClientRect().left;
+          if (offset >= -5 && offset < minOffset) {
+            minOffset = offset;
+            leftMostIndex = i;
+          }
+        });
+
+        selectTab(leftMostIndex);
+      }, 100);
+    });
+
+    // Inicializa com o primeiro botão ativo
+    selectTab(0);
+  </script>
+
 </body>
 </html>
