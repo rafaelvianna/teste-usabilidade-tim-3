@@ -132,13 +132,18 @@ h2 {
     }
 
     li {
-        display: flex;
-        background: #ffffff;
-        padding: 20px;
-        border-radius: 16px;
-        margin-bottom: 20px;
-        text-align: left;
-        color: #000;
+        list-style-type: none;
+
+        a {
+            display: flex;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            text-align: left;
+            color: #000;
+            list-style-type: none;
+        }
 
         div {
             margin-left: 20px;

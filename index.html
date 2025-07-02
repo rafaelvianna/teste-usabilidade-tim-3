@@ -261,52 +261,67 @@
         <img src="./img/m30.png" alt="Imagem da oferta">
     </section>
 
-    <section class="info autoatendimento">
+     <section class="info autoatendimento">
         <span>Autoatendimento TIM</span>
         <h2>Acesse os serviços de atendimento para clientes</h2>
         
         <ul>
             <li>
-                <img src="./img/meu-tim.svg" alt="imagem item">
-                <div>
-                    <h3>Meu TIM</h3>
-                    <p>Recarregue, confira o saldo e tudo do seu plano</p>
-                </div>
+                <a href="./fallback.html">
+                    <img src="./img/meu-tim.svg" alt="imagem item">
+                    <div>
+                        <h3>Meu TIM</h3>
+                        <p>Recarregue, confira o saldo e tudo do seu plano</p>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="./fallback.html">
+                    <img src="./img/meu-tim.svg" alt="imagem item">
+                    <div>
+                        <h3>Fatura ou 2ª via</h3>
+                        <p>Emita a 2ª via, copie o código de barras e mais</p>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="./fallback.html">
+                    <img src="./img/meu-tim.svg" alt="imagem item">
+                    <div>
+                        <h3>Ativação de chip</h3>
+                        <p>Ative ou cadastre o chip da TIM</p>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="./fallback.html">
+                    <img src="./img/meu-tim.svg" alt="imagem item">
+                    <div>
+                        <h3>Suporte técnico</h3>
+                        <p>Confira as principais dúvidas e como resolver</p>
+                    </div>
+                </a>
             </li>
             <li>
-                <img src="./img/meu-tim.svg" alt="imagem item">
-                <div>
-                    <h3>Fatura ou 2ª via</h3>
-                    <p>Emita a 2ª via, copie o código de barras e mais</p>
-                </div>
-            </li>
-            <li>
-                <img src="./img/meu-tim.svg" alt="imagem item">
-                <div>
-                    <h3>Ativação de chip</h3>
-                    <p>Ative ou cadastre o chip da TIM</p>
-                </div>
-            </li>
-            <li>
-                <img src="./img/meu-tim.svg" alt="imagem item">
-                <div>
-                    <h3>Suporte técnico</h3>
-                    <p>Confira as principais dúvidas e como resolver</p>
-                </div>
-            </li>
-            <li>
-                <img src="./img/meu-tim.svg" alt="imagem item">
-                <div>
-                    <h3>Técnico Virtual TIM Fibra</h3>
-                    <p>Conte com suporte rápido para sua internet</p>
-                </div>
+                <a href="./fallback.html">
+                    <img src="./img/meu-tim.svg" alt="imagem item">
+                    <div>
+                        <h3>Técnico Virtual TIM Fibra</h3>
+                        <p>Conte com suporte rápido para sua internet</p>
+                    </div>
+                </a>
             </li>
              <li>
-                <img src="./img/meu-tim.svg" alt="imagem item">
-                <div>
-                    <h3>Mais serviços</h3>
-                    <p>Confira outras opções</p>
-                </div>
+                <a href="./fallback.html">
+                    <img src="./img/meu-tim.svg" alt="imagem item">
+                    <div>
+                        <h3>Mais serviços</h3>
+                        <p>Confira outras opções</p>
+                    </div>
+                </a>
             </li>
         </ul>
     </section>
@@ -492,6 +507,28 @@
     // Inicializa com o primeiro botão ativo
     selectTab(0);
   </script>
+
+  <script>
+        (function (m, a, z, e) {
+        var s, t;
+        try {
+            t = m.sessionStorage.getItem('maze-us');
+        } catch (err) {}
+        
+        if (!t) {
+            t = new Date().getTime();
+            try {
+            m.sessionStorage.setItem('maze-us', t);
+            } catch (err) {}
+        }
+        
+        s = a.createElement('script');
+        s.src = z + '?apiKey=' + e;
+        s.async = true;
+        a.getElementsByTagName('head')[0].appendChild(s);
+        m.mazeUniversalSnippetApiKey = e;
+        })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', 'b0af758c-ced1-45b0-ba7d-b8f46d418580');
+    </script>
 
 </body>
 </html>
